@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- Barra personalizada -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/customToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#FFBB33"
+        tools:ignore="MissingConstraints">
+
+        <!-- Botón de volver -->
+        <ImageButton
+            android:id="@+id/btnVolver"
+            android:layout_width="48dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="4dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Volver"
+            android:onClick="atras"
+            android:padding="6dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/botonatras"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.6" />
+
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="4dp"
+            android:contentDescription="Logo"
+            android:src="@drawable/logogrande"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Título -->
+
+    <!-- Rectángulo (fondo del grupo de botones) -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Filtrar por estrellas"
+        android:drawableEnd="@drawable/star"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/customToolbar" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/backgroundRectangle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="24dp"
+        android:background="#FFFFFF"
+        android:elevation="6dp"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintVertical_bias="0.14">
+
+        <!-- Borde amarillo del rectángulo -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="2dp"
+            android:background="#FFD53B"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Grupo de botones de radio -->
+        <RadioGroup
+            android:id="@+id/radioGroupStars"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:background="#FFFFFF"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!-- Botones de filtro -->
+            <RadioButton
+                android:id="@+id/radio_sinFiltro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="#FFD53B"
+                android:checked="true"
+                android:text=" Todas"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:id="@+id/radio_1estrella"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="#FFD53B"
+                android:text=" 1 estrella"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:id="@+id/radio_2estrellas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="#FFD53B"
+                android:text=" 2 estrellas"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:id="@+id/radio_3estrellas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="#FFD53B"
+                android:text=" 3 estrellas"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:id="@+id/radio_4estrellas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="#FFD53B"
+                android:text=" 4 estrellas"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:id="@+id/radio_5estrellas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="#FFD53B"
+                android:text=" 5 estrellas"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+        </RadioGroup>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

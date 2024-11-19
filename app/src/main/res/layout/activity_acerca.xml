@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    android:padding="0dp">
+
+    <!-- Barra de arriba -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/customToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#FFBB33"
+        tools:ignore="MissingConstraints">
+
+        <!-- Logo -->
+        <ImageButton
+            android:id="@+id/btnVolver"
+            android:layout_width="48dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="4dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Volver"
+            android:onClick="atras"
+            android:padding="6dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/botonatras"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.6" />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="4dp"
+            android:contentDescription="Logo de Food Stars"
+            android:src="@drawable/logogrande"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Contenedor con ScrollView -->
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/customToolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="#FFFFFF"
+            android:elevation="4dp"
+            android:layout_margin="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Acerca de Food Stars"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#FFD53B"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bienvenidos a Food Stars 🍽️\n\nFood Stars es la aplicación perfecta para descubrir y gestionar tus restaurantes favoritos de forma rápida y sencilla. Diseñada pensando en los amantes de la gastronomía, esta aplicación te permite:\n\n- Explorar Restaurantes: Encuentra una lista de restaurantes con información detallada, incluyendo dirección, teléfono, valoración y comentarios.\n\n- Filtrar por Preferencias: Personaliza tu experiencia seleccionando restaurantes según tus preferencias de valoración.\n\n- Contactar Directamente: Con solo un toque, podrás llamar al restaurante de tu elección, facilitando la reserva o consulta de manera rápida.\n\n- Guardar tus Favoritos: Mantén un registro de los restaurantes que más te gustan y accede a ellos fácilmente.\n\nFood Stars es más que una guía de restaurantes; es una herramienta práctica que te permite organizar tus visitas gastronómicas y descubrir nuevos lugares donde disfrutar de buena comida.\n\nDesarrollador: Lorena\nVersión: 1.0\nContacto: support@foodstars.com\n\nGracias por usar Food Stars. ¡Esperamos que disfrutes de la mejor experiencia culinaria! 🥂 \n"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:justificationMode="inter_word" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
